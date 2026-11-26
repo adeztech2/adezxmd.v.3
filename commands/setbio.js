@@ -45,7 +45,7 @@ async function setBioCommand(sock, chatId, message, args) {
             const input = parts.join(' ').trim();
             if (input.toLowerCase() === 'default') {
                 const uptime = Date.now() - global.botStartTime;
-                newBio = `ADEZ NEXUS Bot running for ${formatUptime(uptime)}`;
+                newBio = `ADEZ-XMD.v.3 Bot running for ${formatUptime(uptime)}`;
             } else {
                 newBio = input;
             }

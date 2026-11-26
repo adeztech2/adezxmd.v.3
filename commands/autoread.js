@@ -209,7 +209,7 @@ function isBotMentionedInMessage(message, botNumber) {
             return true;
         }
 
-        const botNames = [global.botname?.toLowerCase(), getBotName().toLowerCase(), 'bot', 'adez', 'ADEZ NEXUS Bot'];
+        const botNames = [global.botname?.toLowerCase(), getBotName().toLowerCase(), 'bot', 'adez', 'ADEZ-XMD.v.3 Bot'];
         const words = textContent.toLowerCase().split(/\s+/);
         if (botNames.some(name => words.includes(name))) {
             return true;

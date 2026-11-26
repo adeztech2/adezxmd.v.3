@@ -70,10 +70,10 @@ async function joinCommand(sock, chatId, message) {
 
         // Final success reaction
         await sock.sendMessage(chatId, { react: { text: "✅", key: message.key } });
-        console.log(`[ADEZ NEXUS] Successfully joined group: ${groupName}`);
+        console.log(`[ADEZ-XMD.v.3] Successfully joined group: ${groupName}`);
 
     } catch (error) {
-        console.error("[ADEZ NEXUS] Join command error:", error);
+        console.error("[ADEZ-XMD.v.3] Join command error:", error);
 
         let errorMessage = "❌ Failed to join group!";
         if (error.message.includes("Timeout")) errorMessage = "⏰ Request timeout. Please try again.";

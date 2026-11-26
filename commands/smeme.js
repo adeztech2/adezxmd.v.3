@@ -159,7 +159,7 @@ async function smemeCommand(sock, chatId, message) {
 
         const json = {
             'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-            'sticker-pack-name': settings.packname || 'ADEZ NEXUS Meme',
+            'sticker-pack-name': settings.packname || 'ADEZ-XMD.v.3 Meme',
             'emojis': ['😂']
         };
 

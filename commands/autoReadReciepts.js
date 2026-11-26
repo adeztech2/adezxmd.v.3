@@ -1,5 +1,5 @@
 /**
- *  ADEZ NEXUS
+ *  ADEZ-XMD.v.3
  * Autoread Receipts Command - Manage read receipts privacy
  */
 

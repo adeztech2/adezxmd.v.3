@@ -21,12 +21,12 @@ async function ownerCommand(sock, chatId) {
             'END:VCARD',
         ].join('\n');
 
-        const ownerText = `╭━━━〔 👑 ADEZ NEXUS OWNER 〕━━━╮
+        const ownerText = `╭━━━〔 👑 ADEZ-XMD.v.3 OWNER 〕━━━╮
 ┃
 ┃ 👤 Name: ${settings.botOwner}
 ┃ 📱 Contact: +${settings.ownerNumber}
 ┃
-┃ 🤖 Bot: ADEZ NEXUS 👑
+┃ 🤖 Bot: ADEZ-XMD.v.3 👑
 ┃ ⚡ Status: Available
 ┃ 💬 Feel free to contact owner 🔥
 ┃

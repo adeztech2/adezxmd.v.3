@@ -413,9 +413,9 @@ const { createGroupCommand } = require('./commands/creategroup');
 /*━━━━━━━━━━━━━━━━━━━━*/
 // Global settings
 /*━━━━━━━━━━━━━━━━━━━━*/
-global.packname = settings?.packname || "ADEZ NEXUS";
+global.packname = settings?.packname || "ADEZ-XMD.v.3";
 global.author = settings?.author || "ADEZ TECH";
-global.channelLink = "";
+global.channelLink = settings?.channelLink || "";
 global.ytchanel = "";
 
 // Channel info for message context
@@ -484,11 +484,13 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     ...existingContextInfo,
                     forwardingScore: 1,
                     isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363430014003120@newsletter',
-                        newsletterName: 'ADEZ NEXUS',
-                        serverMessageId: -1
-                    }
+                    ...(global.newsletterJid ? {
+                        forwardedNewsletterMessageInfo: {
+                            newsletterJid: global.newsletterJid,
+                            newsletterName: 'ADEZ-XMD.v.3',
+                            serverMessageId: -1
+                        }
+                    } : {})
                 }
             };
         }
@@ -635,7 +637,7 @@ const fake = createFakeContact(message);
             const datez = moment(Date.now()).tz(timezones).format("DD/MM/YYYY");
 
             if (message.message) {
-                lolcatjs.fromString(`┏━━━━━━━━━━━━━『  ADEZ NEXUS 』━━━━━━━━━━━━━─`);
+                lolcatjs.fromString(`┏━━━━━━━━━━━━━『  ADEZ-XMD.v.3 』━━━━━━━━━━━━━─`);
                 lolcatjs.fromString(`»  Sent Time: ${dayz}, ${timez}`);
                 lolcatjs.fromString(`»  Date: ${datez}`);
                 lolcatjs.fromString(`»  Message Type: ${mtype}`);
@@ -683,7 +685,7 @@ const fake = createFakeContact(message);
             await fancyReplyHandlers.get(fancyStanzaId)(message);
             return;
         }
-// Intercept replies to ADEZ NEXUS category menus
+// Intercept replies to ADEZ-XMD.v.3 category menus
 if (await handleMenuReply(sock, message)) {
     return;
 }

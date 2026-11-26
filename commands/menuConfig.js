@@ -25,7 +25,7 @@ async function menuConfigCommand(sock, chatId, message, args) {
     if (args.length === 0) {
         // Show current settings
         const settings = getMenuSettings();
-        let configMessage = `📑 *ADEZ NEXUS MENU CONFIG*\n`;
+        let configMessage = `📑 *ADEZ-XMD.v.3 MENU CONFIG*\n`;
         configMessage += `🔵 *Current Style:* ${settings.menuStyle} (${MENU_STYLES[settings.menuStyle]})\n`;
         configMessage += `🔵 *Show Memory:* ${settings.showMemory ? '✅' : '❌'}\n`;
         configMessage += `🔵 *Show Uptime:* ${settings.showUptime ? '✅' : '❌'}\n`;

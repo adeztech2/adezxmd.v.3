@@ -1,5 +1,5 @@
 /**
- * ADEZ NEXUS
+ * ADEZ-XMD.v.3
  * Autorecording Command - Shows fake recording (voice note) status
  */
 

@@ -9,8 +9,8 @@ async function antistickerCommand(sock, chatId, msg, senderId) {
       key: { participants: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net", fromMe: false },
       message: {
         contactMessage: {
-          displayName: "ADEZ NEXUS",
-          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ADEZ NEXUS\nTEL;waid=${id}:${id}\nEND:VCARD`
+          displayName: "ADEZ-XMD.v.3",
+          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ADEZ-XMD.v.3\nTEL;waid=${id}:${id}\nEND:VCARD`
         }
       },
       participant: "0@s.whatsapp.net"
@@ -66,8 +66,8 @@ async function handleStickerDetection(sock, chatId, msg, senderId) {
       key: { participants: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net", fromMe: false },
       message: {
         contactMessage: {
-          displayName: "ADEZ NEXUS",
-          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ADEZ NEXUS\nTEL;waid=${id}:${id}\nEND:VCARD`
+          displayName: "ADEZ-XMD.v.3",
+          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ADEZ-XMD.v.3\nTEL;waid=${id}:${id}\nEND:VCARD`
         }
       },
       participant: "0@s.whatsapp.net"

@@ -49,7 +49,7 @@ async function imageCommand(sock, chatId, message) {
             }, { quoted: createFakeContact(message) });
         }
 
-        const fancyBotName = `ADEZ NEXUS`;
+        const fancyBotName = `ADEZ-XMD.v.3`;
 
         for (const url of imageUrls) {
             try {

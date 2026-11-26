@@ -1,7 +1,7 @@
 {
   "name": "adez-nexus",
   "version": "2.0.1",
-  "description": "ADEZ NEXUS WhatsApp Bot",
+  "description": "ADEZ-XMD.v.3 WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

@@ -5,9 +5,9 @@
 */
 
 const settings = {
-  packname: '✮⃝ADEZ NEXUS',
+  packname: '✮⃝ADEZ-XMD.v.3',
   author: '✮⃝ADEZ TECH',
-  botName: "ADEZ NEXUS",
+  botName: "ADEZ-XMD.v.3",
   botOwner: 'ADEZ TECH', // Your name
   ownerNumber: process.env.OWNER_NUMBER || '254107349826', //Set your number here without + symbol, just add country code & number without any space
   giphyApiKey: '',
@@ -20,6 +20,8 @@ const settings = {
   updateZipToken: '',
   updateZipUrl: '',
   timezone: 'Africa/Nairobi',
+  groupLink: 'https://chat.whatsapp.com/CQKxbaUHijZ2JcPVpuGbqL?s=cl&p=a&iam=2',
+  channelLink: 'https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m',
 };
 
 module.exports = settings;

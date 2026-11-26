@@ -8,7 +8,7 @@ async function ytsCommand(sock, chatId, senderId, message, userMessage) {
 
         if (!query) {
             return await sock.sendMessage(chatId, {
-                text: '🔍 YouTube Search Command\n\nUsage:\n.yts <search_query>\n\nExample:\n.yts Godzilla\n.yts latest songs\n.yts tutorial for ADEZ NEXUS'
+                text: '🔍 YouTube Search Command\n\nUsage:\n.yts <search_query>\n\nExample:\n.yts Godzilla\n.yts latest songs\n.yts tutorial for ADEZ-XMD.v.3'
             }, { quoted: createFakeContact(message) });
         }
 

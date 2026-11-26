@@ -76,7 +76,7 @@ const generateMenu = (pushname, currentMode, hostName, ping, uptimeFormatted, pr
     let newOwner = getOwnerName();
     const menuSettings = getMenuSettings();
 
-    let menu = `┏❐  *❴ ADEZ NEXUS BOT❵* ❐\n`;
+    let menu = `┏❐  *❴ ADEZ-XMD.v.3 BOT❵* ❐\n`;
     menu += `┃➥ *User:* ${pushname}\n`;
     menu += `┃➥ *Owner:* ${newOwner}\n`;
     menu += `┃➥ *Mode:* ${currentMode}\n`;

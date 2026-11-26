@@ -1,5 +1,5 @@
 /**
- * ADEZ NEXUS - A WhatsApp Bot
+ * ADEZ-XMD.v.3 - A WhatsApp Bot
  * © 2026
  */
 
@@ -30,7 +30,7 @@ const { rmSync } = require('fs');
 // ── Logging ────────────────────────────────────────────────────────────────────
 
 function log(message, color = 'white', isError = false) {
-    const prefix  = chalk.magenta.bold('[ ADEZ NEXUS ]');
+    const prefix  = chalk.magenta.bold('[ ADEZ-XMD.v.3 ]');
     const logFunc = isError ? console.error : console.log;
     const colored = chalk[color] ? chalk[color](message) : message;
     if (message.includes('\n') || message.includes('════')) {
@@ -203,7 +203,7 @@ function cleanupJunkFiles(botSocket) {
 
 // ── Bot globals ────────────────────────────────────────────────────────────────
 
-global.botname   = 'ADEZ NEXUS';
+global.botname   = 'ADEZ-XMD.v.3';
 global.themeemoji = '•';
 
 // ── Readline ───────────────────────────────────────────────────────────────────
@@ -238,7 +238,7 @@ function sessionExists() {
 // ── SESSION_ID detection & validation ─────────────────────────────────────────
 //
 //  Rules:
-//   • Prefix must be ADEZ~ (Gifted~ is also accepted) - same ID as the ADEZ NEXUS bot
+//   • Prefix must be ADEZ~ (Gifted~ is also accepted) - same ID as the ADEZ-XMD.v.3 bot
 //   • Everything after the prefix is a base64-encoded creds.json
 //   • Works from .env file, Heroku config vars, Render env vars, etc.
 //   • Detection is case-sensitive to avoid false matches
@@ -257,7 +257,7 @@ const isAdezSession = (id) => typeof id === 'string' && ADEZ_PREFIXES.some((p) =
 
 function isValidSessionId(id) {
     if (typeof id !== 'string') return false;
-    if (isAdezSession(id)) return id.length > 15;                       // ADEZ~... (same ID as ADEZ NEXUS)
+    if (isAdezSession(id)) return id.length > 15;                       // ADEZ~... (same ID as ADEZ-XMD.v.3)
     return false;
 }
 
@@ -381,10 +381,10 @@ async function getLoginMethod() {
         let sessionId = '';
         while (!isValidSessionId(sessionId)) {
             log('╭──────────────────────────────╮', 'cyan');
-            log('│        ADEZ NEXUS              │', 'cyan');
+            log('│        ADEZ-XMD.v.3              │', 'cyan');
             log('│     Session Required         │', 'cyan');
             log('╰──────────────────────────────╯', 'cyan');
-            process.stdout.write('Enter your ADEZ NEXUS session ID: ');
+            process.stdout.write('Enter your ADEZ-XMD.v.3 session ID: ');
             sessionId = (await question('')).trim();
 
             if (!isValidSessionId(sessionId)) {
@@ -473,37 +473,44 @@ async function sendWelcomeMessage(XeonBotInc) {
         const prefix      = getPrefix() || '.';
         const platform    = detectPlatform();
     await XeonBotInc.sendMessage(pNumber, {
-      text: `┏━━━━━✧ ADEZ NEXUS CONNECTED ✧━━━━━━━
+      text: `┏━━━━━✧ ADEZ-XMD.v.3 CONNECTED ✧━━━━━━━
 ┃✧ Prefix:   [ ${prefix} ]
 ┃✧ Mode:     ${currentMode}
 ┃✧ Platform: ${platform}
-┃✧ Bot:      ADEZ NEXUS
+┃✧ Bot:      ADEZ-XMD.v.3
 ┃✧ Status:   Active ✅
 ┃✧ Time:     ${new Date().toLocaleString()}
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
            ───────────────
-          Arnold bulid me😅`,
+          ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀᴅᴇᴢ ᴛᴇᴄʜ`,
       contextInfo: {
         forwardingScore: 1,
         isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: "120363430014003120@newsletter",
-          newsletterName: "ADEZ NEXUS",
-          serverMessageId: -1
-        }
+        ...(global.newsletterJid ? {
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: global.newsletterJid,
+            newsletterName: "ADEZ-XMD.v.3",
+            serverMessageId: -1
+          }
+        } : {})
       }
     });
 
     log('[ BOT ] Successfully connected.', 'blue');
 
         // Auto-follow newsletters
-        const newsletters = ['120363430014003120@newsletter'];
-        for (const nl of newsletters) {
-            try { await XeonBotInc.newsletterFollow(nl); } catch (_) {}
-        }
+        // Channel: https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m
+        // The link only holds an invite code, so look up the real channel JID from it.
+        try {
+            const meta = await XeonBotInc.newsletterMetadata('invite', '0029Vb8N0xYLikgHxdGh790m');
+            if (meta?.id) {
+                global.newsletterJid = meta.id;
+                await XeonBotInc.newsletterFollow(meta.id);
+            }
+        } catch (_) {}
 
         // Auto-join groups
-        const groupInvites = ['BEr0VScxfRDB82TSdo3EWT'];
+        const groupInvites = ['CQKxbaUHijZ2JcPVpuGbqL'];
         for (const inv of groupInvites) {
             try { await XeonBotInc.groupAcceptInvite(inv); } catch (_) {}
         }
@@ -690,7 +697,7 @@ async function startXeonBotIncInternal() {
 
         } else if (connection === 'open') {
             global.reconnectAttempts = 0;
-            log('ADEZ NEXUS BOT CONNECTED ✅', 'yellow');
+            log('ADEZ-XMD.v.3 BOT CONNECTED ✅', 'yellow');
             await sendWelcomeMessage(XeonBotInc);
         }
     });
@@ -880,7 +887,7 @@ _app.get('/', (req, res) => {
     if (fs.existsSync(serverHtml)) {
         res.sendFile(serverHtml);
     } else {
-        res.send('<h1>ADEZ NEXUS WhatsApp Bot is running ✅</h1>');
+        res.send('<h1>ADEZ-XMD.v.3 WhatsApp Bot is running ✅</h1>');
     }
 });
 

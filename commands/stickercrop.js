@@ -111,7 +111,7 @@ async function stickercropCommand(sock, chatId, message) {
         // Create metadata
         const json = {
             'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-            'sticker-pack-name': settings.packname || 'ADEZ NEXUS',
+            'sticker-pack-name': settings.packname || 'ADEZ-XMD.v.3',
             'emojis': ['✂️']
         };
 

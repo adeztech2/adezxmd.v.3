@@ -48,7 +48,7 @@ async function imageCommand(sock, chatId, message) {
             });
         }
 
-        const fancyBotName = `ADEZ NEXUS`;
+        const fancyBotName = `ADEZ-XMD.v.3`;
 
         for (const url of imageUrls) {
             try {

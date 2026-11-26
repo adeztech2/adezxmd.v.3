@@ -11,14 +11,14 @@ function createFakeContact(message) {
             participants: "0@s.whatsapp.net",
             remoteJid: "status@broadcast",
             fromMe: false,
-            id: "ADEZ NEXUS"
+            id: "ADEZ-XMD.v.3"
         },
         message: {
             contactMessage: {
                 vcard: `BEGIN:VCARD
 VERSION:3.0
 N:Bot;;;;
-FN: ADEZ NEXUS
+FN: ADEZ-XMD.v.3
 END:VCARD`
             }
         },
@@ -38,7 +38,7 @@ try {
 
     const json = await res.json();
 
-    const txt = `🚀 *ADEZ NEXUS REPO INFO*
+    const txt = `🚀 *ADEZ-XMD.v.3 REPO INFO*
 
 ◦ *Name:* ${json.name}
 ◦ *Stars:* ${json.stargazers_count}
@@ -51,7 +51,7 @@ try {
 *Description:*
 ${json.description || "No description"}
 
-Hey ${pushname}, Thanks for using ADEZ NEXUS Bot`;
+Hey ${pushname}, Thanks for using ADEZ-XMD.v.3 Bot`;
 
     const imgPath = path.join(__dirname, "../assets/menu3.jpg");
 
