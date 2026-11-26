@@ -1,0 +1,47 @@
+{
+  "name": "ADEZ NEXUS",
+  "description": "ADEZ NEXUS WhatsApp Bot",
+  "repository": "https://github.com/bonyke2-bot/BONY-XMD",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "adez-nexus"
+  ],
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "env": {
+    "SESSION_ID": {
+      "description": "Your WhatsApp session ID (starts with ADEZ~)",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number with country code, digits only (no +)",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Bot command prefix",
+      "value": ".",
+      "required": true
+    },
+    "APP_URL": {
+      "description": "Your app URL for keep-alive: https://YOUR-APP-NAME.herokuapp.com (use the same app name you typed above)",
+      "required": true
+    }
+  }
+}
