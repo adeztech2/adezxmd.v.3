@@ -482,7 +482,7 @@ async function sendWelcomeMessage(XeonBotInc) {
 ┃✧ Time:     ${new Date().toLocaleString()}
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
            ───────────────
-          ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴏɴʏ ᴋᴇ`,
+          Arnold bulid me😅`,
       contextInfo: {
         forwardingScore: 1,
         isForwarded: true,
