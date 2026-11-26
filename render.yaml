@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: adez-nexus
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: PREFIX
+        value: "."
+      - key: KEEP_ALIVE_MINUTES
+        value: "4"
