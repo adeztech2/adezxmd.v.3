@@ -30,7 +30,7 @@ try {
     const fkontak = createFakeContact(message);
     const pushname = message.pushName || "Unknown User";
 
-    const res = await fetch("https://api.github.com/repos/bonyke2-bot/BONY-XMD");
+    const res = await fetch("https://api.github.com/repos/adeztech2/adezxmd.v.3");
 
     if (!res.ok) {
         throw new Error(`GitHub API Error: ${res.status}`);
