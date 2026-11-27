@@ -19,6 +19,8 @@ global.APIs = {
 
 module.exports = {
     SESSION_ID: global.SESSION_ID || process.env.SESSION_ID,
+    MEGAN_API_URL: process.env.MEGAN_API_URL || 'https://apis.megan.qzz.io',
+    MEGAN_API_KEY: process.env.MEGAN_API_KEY || '',
     WARN_COUNT: 3,
     APIs: global.APIs,
     APIKeys: {}

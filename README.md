@@ -88,3 +88,14 @@ Once configured, your bot will be ready to use!
 4. A Basic dyno never sleeps. On Eco dynos the keep-alive ping uses `APP_URL`.
 5. If the logs say "Invalid SESSION_ID", the value does not start with `ADEZ~`.
 6. Still seeing an old bot name after a restart? Send `.setbotname ADEZ-XMD.v.3` once. The saved setting in Postgres wins over the file.
+
+## Megan API configuration
+
+The bot exposes Megan settings through environment variables. Set these in your hosting provider or local `.env` file:
+
+```env
+MEGAN_API_URL=https://apis.megan.qzz.io
+MEGAN_API_KEY=your_private_megan_api_key
+```
+
+Never commit `MEGAN_API_KEY` to GitHub. The Heroku app template declares it as a required secret, while `MEGAN_API_URL` is preconfigured with the Megan base URL.

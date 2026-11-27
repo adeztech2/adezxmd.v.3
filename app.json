@@ -42,6 +42,15 @@
     "APP_URL": {
       "description": "Your app URL for keep-alive: https://YOUR-APP-NAME.herokuapp.com (use the same app name you typed above)",
       "required": true
+    },
+    "MEGAN_API_URL": {
+      "description": "Megan API base URL",
+      "value": "https://apis.megan.qzz.io",
+      "required": true
+    },
+    "MEGAN_API_KEY": {
+      "description": "Megan API key (keep this value private)",
+      "required": true
     }
   }
 }
